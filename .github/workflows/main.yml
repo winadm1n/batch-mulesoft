@@ -27,7 +27,7 @@ jobs:
       run: |   
         # mkdir jar-folder
         # cd jar-folder
-        curl -L -o migrator.jar "https://github.com/spring-projects-experimental/spring-boot-migrator/releases/download/0.15.0/spring-boot-migrator.jar"
+        curl -L -o migrator.jar "https://github.com/spring-projects-experimental/spring-boot-migrator/releases/download/0.14.0/spring-boot-migrator.jar"
         pwd | ls -a
     - name: Configure Git identity
       run: |
