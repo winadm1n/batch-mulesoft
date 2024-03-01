@@ -4,7 +4,7 @@ name: Mule to Spring Boot Migration
 on:
   push:
     paths:
-      - 'mule4-batch-demo/**'
+      - 'mule4-dw2-avro-support/**'
  
 jobs: 
   migrate_and_run:
@@ -56,7 +56,7 @@ jobs:
         sudo apt install maven -y
         # chmod +x migrator.jar
         touch recipes.txt
-        echo 'scan "mule4-batch-demo"'>> recipes.txt
+        echo 'scan "mule4-dw2-avro-support"'>> recipes.txt
         echo "apply 1" >> recipes.txt
         echo "apply 1" >> recipes.txt
        
@@ -67,7 +67,7 @@ jobs:
       run: |
         if [ ! -d "migrated-folder" ]; then
           mkdir migrated-folder
-          mv mule4-batch-demo/* migrated-folder/  # Moves files from specific-folder to new-folder
+          mv mule4-dw2-avro-support/* migrated-folder/  # Moves files from specific-folder to new-folder
           ls
           cd ./migrated-folder
           git add .
